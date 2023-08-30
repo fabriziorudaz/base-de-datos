@@ -53,3 +53,12 @@ select avg(precio) from articulos where fabricante = 2;
 
 select count(precio) from articulos where precio >= 18000;
 
+select nombre, precio from articulos where precio >= 18000;
+
+select *from articulos, fabricantes;
+
+select *from articulos a, fabricantes f where a.fabricante=f.cod_fab;
+
+select fabricante, avg(precio) from articulos a, fabricantes f where a.fabricante =f.cod_fab group by fabricante;
+
+select f.nombre, avg(precio) from articulos a, fabricantes f where a.fabricante =f.cod_fab group by fabricante;
