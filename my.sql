@@ -22,6 +22,13 @@ insert into fabricantes(cod_fab, nombre) values
 (null, 'gerardo');
 
 insert into articulos(cod_art, nombre, precio) values
-(null 'monintor', '100000')
-(null 'pc', '120000')
-(null '')
+(null, 'monintor', '100000'),
+(null, 'pc', '120000'),
+(null, 'mouse', '12500'),
+(null, 'router', '45600'),
+(null, 'celular', '110000' ),
+(null, 'teclado', '20000'),
+(null, 'motherboard', '56000'),
+(null, 'disco_duro', '43000'),
+(null, 'auriculares', '14300'),
+(null, 'microfono', '25000');
