@@ -62,3 +62,13 @@ select *from articulos a, fabricantes f where a.fabricante=f.cod_fab;
 select fabricante, avg(precio) from articulos a, fabricantes f where a.fabricante =f.cod_fab group by fabricante;
 
 select f.nombre, avg(precio) from articulos a, fabricantes f where a.fabricante =f.cod_fab group by fabricante;
+
+select f.nombre, avg(precio) from articulos a inner join fabricantes f on a.fabricante=f.cod_fab group by fabricante having avg(precio) > 15000;
+
+select nombre, precio from articulos where precio in (select min(precio) from articulos);
+
+insert into articulos (cod_art, nombre, precio, fabricante)values(null, 'altavoces', '7000', '2');
+
+update articulos set nombre = "impresora_laser" where cod_art = 8;
+
+update articulos set precio = precio * 0.90 where precio >= 120000;
